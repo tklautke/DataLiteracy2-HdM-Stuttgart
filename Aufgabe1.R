@@ -18,15 +18,19 @@ ages <- c(
 #               suchspersonen waren männlich, die 10 danach weiblich. Verwenden Sie zum Erstellen dieses Vektors
 #               die Funktion rep()
 sex <- c("male", "female")
+sex <- rep(sex, each = 5)
+
+
+# DataFrame für weitere Aufgaben
 dataFrame <- data.frame(ages, sex)
 
 # Aufgabe 3:    Berechnen Sie den Mittelwert und die Standardabweichung des Alters Ihrer Versuchspersonen.
-averageAge <- mean(dataFrame$ages)
-standardDeviationAge <- sd(dataFrame$ages)
+averageAge <- mean(ages)
+standardDeviationAge <- sd(ages)
 
 # Aufgabe 4:    Ist die 5. Versuchsperson älter als die 11. Versuchsperson? Überprüfen Sie dies durch Indizieren der
 #               Werte und einen geeigneten Vergleichsoperator.
-isPersonOlder <- dataFrame$ages[5] > dataFrame$ages[11]
+isPersonOlder <- ages[5] > ages[11]
 
 # Aufgabe 5:    Wie viele Versuchspersonen sind unter 22 Jahre alt?
 agesTable <- table(ages)
